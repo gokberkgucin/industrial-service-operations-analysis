@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local analysis outputs
+outputs/
+*.log
+planning/
+
+# Private/raw source materials should stay outside the public repo
+*.pdf
+*.docx
+*.doc
+*.odt
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

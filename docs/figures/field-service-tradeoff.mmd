@@ -1,0 +1,25 @@
+flowchart LR
+    A[Field service demand] --> B{Job type}
+    B --> C[PM: planned maintenance]
+    B --> D[Emergency repair]
+
+    E{Workforce design} --> F[E-FSE: flexible technicians]
+    E --> G[N-FSE: PM-focused technicians]
+
+    F --> C
+    F --> D
+    G --> C
+
+    G --> H[Direct effect: faster PM response]
+    H --> I[Less PM backlog]
+    I --> J[Indirect effect: fewer avoidable emergencies]
+    J --> K[Lower emergency pressure]
+
+    D --> L[Emergency priority]
+    L --> M[PM postponement risk]
+    M --> N[Emergency trap]
+    N --> D
+
+    K --> O[Service performance]
+    F --> O
+    M --> O
