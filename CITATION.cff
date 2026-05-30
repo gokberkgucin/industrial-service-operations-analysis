@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this portfolio project, please cite it using the metadata below."
+title: "Industrial Service Operations Analysis"
+type: software
+authors:
+  - family-names: "Gucin"
+    given-names: "Gokberk"
+abstract: "A public-safe portfolio project on industrial service operations, field-service cross-training, preventive maintenance, emergency workload, and illustrative simulation."
+repository-code: "https://github.com/gokberkgucin/industrial-service-operations-analysis"
+date-released: "2026-05-30"
+keywords:
+  - service operations
+  - field service
+  - cross-training
+  - preventive maintenance
+  - operations analysis

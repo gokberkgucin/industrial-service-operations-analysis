@@ -14,16 +14,37 @@ dist/
 # Jupyter
 .ipynb_checkpoints/
 
-# Local analysis outputs
+# Local/private work products
+work/
 outputs/
+tmp/
+temp/
 *.log
 planning/
+work/processed_images/private_reference/
+
+# Local extraction/build scripts generated during private source processing
+scripts/extract_docx_assets.py
+scripts/extract_pdf_assets.py
+scripts/optimize_images.py
+scripts/build_markdown.py
+
+# Temporary render and extraction folders
+**/rendered_pages/
+**/pages_png/
+**/images_raw/
+**/media_raw/
+*.tmp
 
 # Private/raw source materials should stay outside the public repo
 *.pdf
 *.docx
 *.doc
 *.odt
+raw/
+raw_sources/
+source_materials/
+private_reference/
 
 # Editors and OS files
 .vscode/
