@@ -1,73 +1,50 @@
-﻿# Industrial Service Operations Analysis
+# Industrial Service Operations Analysis
 
-Bu depo, Siemens Energy stajÄ±m sÄ±rasÄ±nda yaptÄ±ÄŸÄ±m iki akademik makale analizinin GitHub'a uygun, seÃ§ilmiÅŸ ve kamusal sÃ¼rÃ¼mÃ¼nÃ¼ iÃ§erir.
+Bu repo, Siemens Energy stajı sırasında hazırladığım iki akademik makale analizinin GitHub'a uygun, seçilmiş ve kamusal sürümüdür.
 
-AmaÃ§, bir staj defterini olduÄŸu gibi arÅŸivlemek deÄŸil; hizmet operasyonlarÄ±, saha servisi, bakÄ±m planlama ve analitik dÃ¼ÅŸÃ¼nme becerilerimi gÃ¶rÃ¼nÃ¼r kÄ±lan bir portfÃ¶y Ã§alÄ±ÅŸmasÄ± Ã¼retmektir.
+Amaç ham staj defterini arşivlemek değil; hizmet operasyonları, saha servisi, bakım planlama ve analitik düşünme tarafındaki çalışmayı okunabilir bir portföy çıktısına dönüştürmektir.
 
-## Bu repoda ne var?
+## Neden Önemli?
 
-Bu Ã§alÄ±ÅŸma Ã¼Ã§ ana parÃ§adan oluÅŸuyor:
+Çalışma iki beceriyi birlikte gösterir: akademik bir metni teknik olarak anlamlandırmak ve bu metindeki karar problemini saha servisi bağlamına dikkatli biçimde bağlamak.
 
-- staj baÄŸlamÄ±nÄ± ve gÃ¶revin kapsamÄ±nÄ± anlatan kÄ±sa bir Ã¶zet,
-- hizmet operasyonlarÄ±nÄ±n tarihsel/kavramsal Ã§erÃ§evesini ele alan ilk makale analizi,
-- saha servisinde Ã§apraz eÄŸitim, Ã¶nleyici bakÄ±m ve performans dengelerini ele alan ikinci makale analizi.
+Özellikle ikinci yazı, bakım iş yükü, önleyici bakım, acil müdahale, teknisyen yetkinliği ve müşteri performansı arasındaki dengeyi tartıştığı için repodaki ana teknik ağırlığı taşır.
 
-![Siemens Energy baÄŸlamÄ±](figures/internship/siemens-energy-business-units.webp)
+## Ana İçerik
 
-## Ana iÃ§erik
+- [Makale Ödevi 1: Hizmet Operasyonları Hakkında Bir Deneme](docs/internship-part-1.md)  
+  Hizmet operasyonları literatüründeki tarihsel ve kavramsal çizgiyi; standardizasyon, deneyim tasarımı, süreç düşüncesi ve kişisel operasyon gözlemleriyle birlikte ele alır.
 
-- [Staj Ã¶zeti](internship_summary.md)
-- [Makale 1 analizi](article1_analysis.md)
-- [Makale 2 analizi](article2_analysis.md)
-- [YayÄ±n notlarÄ± ve kapsam sÄ±nÄ±rlarÄ±](publication_notes.md)
-- [KaynakÃ§a](references/bibliography.md)
+- [Makale Ödevi 2: Saha Servisinde Çapraz Eğitim Politikaları](docs/internship-part-2.md)  
+  PM/emergency ayrımı, E-FSE/N-FSE işgücü yapısı, kapasite kısıtları, kullanılabilirlik, ceza puanı, emergency trap ve sözleşme kapsamı üzerinden daha teknik bir analiz sunar.
 
-## Neden Ã¶nemli?
+## Repo Yapısı
 
-Bu repo, Ã¼Ã§ farklÄ± beceriyi aynÄ± yerde gÃ¶stermeyi amaÃ§lÄ±yor:
+```mermaid
+flowchart TD
+    A["README.md"] --> B["docs/internship-part-1.md"]
+    A --> C["docs/internship-part-2.md"]
+    A --> D["docs/publication-note.md"]
+    A --> E["docs/references.md"]
+    B --> F["assets/images/part-1"]
+    C --> G["assets/images/part-2"]
+    F --> H["metadata/image-manifest.csv"]
+    G --> H
+```
 
-1. YoÄŸun akademik iÃ§eriÄŸi okuyup anlamlandÄ±rmak,
-2. Kavramsal ve teknik iÃ§eriÄŸi kendi cÃ¼mlelerimle aÃ§Ä±klamak,
-3. Teoriyi saha servisi ve operasyon yÃ¶netimi pratiÄŸine baÄŸlamak.
+## Nasıl Okunmalı?
 
-Ã–zellikle ikinci makale analizi, bakÄ±m iÅŸ yÃ¼kÃ¼, Ã¶nleyici bakÄ±m, acil bakÄ±m, teknisyen tipi, mÃ¼ÅŸteri memnuniyeti ve kullanÄ±labilirlik arasÄ±ndaki dengeyi tartÄ±ÅŸtÄ±ÄŸÄ± iÃ§in bu deponun teknik merkezini oluÅŸturur.
+Teknik değerlendirme için önce ikinci yazıdan başlamak daha verimli olur. Birinci yazı, hizmet operasyonları tarafındaki kavramsal arka planı ve staj defterindeki daha deneme karakterli düşünme çizgisini tamamlar.
 
-![Makale 2 tartÄ±ÅŸmasÄ±nÄ± destekleyen aÃ§Ä±klayÄ±cÄ± gÃ¶rsel](figures/article2/response-times-high-workload.webp)
+Önerilen sıra:
 
-## Teknik temalar
+1. [Makale Ödevi 2: Saha Servisinde Çapraz Eğitim Politikaları](docs/internship-part-2.md)
+2. [Makale Ödevi 1: Hizmet Operasyonları Hakkında Bir Deneme](docs/internship-part-1.md)
+3. [Yayın notları ve kapsam sınırları](docs/publication-note.md)
+4. [Kaynaklar](docs/references.md)
 
-- hizmet operasyonlarÄ±
-- saha servisi
-- Ã¶nleyici bakÄ±m
-- acil bakÄ±m
-- iÅŸgÃ¼cÃ¼ konfigÃ¼rasyonu
-- Ã§apraz eÄŸitim politikasÄ±
-- mÃ¼ÅŸteri deneyimi
-- sÃ¼reÃ§ dÃ¼ÅŸÃ¼ncesi
+## Yayın Notu
 
-## Kamuya aÃ§Ä±k sÃ¼rÃ¼m notu
+Bu repo resmi kurum görüşü, kaynak makale reprodüksiyonu veya ham staj defteri paylaşımı değildir.
 
-Bu repo ham staj defteri, kurum iÃ§i belge arÅŸivi veya telifli makale kopyasÄ± deÄŸildir.
-
-Kamuya aÃ§Ä±k sÃ¼rÃ¼m hazÄ±rlanÄ±rken kiÅŸisel/kurumsal ayrÄ±ntÄ±lar ayÄ±klanmÄ±ÅŸ, kaynak PDF dosyalarÄ± repoya eklenmemiÅŸ ve gÃ¶rseller yalnÄ±zca aÃ§Ä±klayÄ±cÄ±, yeniden Ã¼retilmiÅŸ veya sadeleÅŸtirilmiÅŸ biÃ§imde kullanÄ±lmÄ±ÅŸtÄ±r.
-
-## Okuma sÄ±rasÄ±
-
-Bu depoyu ilk kez geziyorsanÄ±z ÅŸu sÄ±rayla ilerlemeniz Ã¶nerilir:
-
-1. [Staj Ã¶zeti](internship_summary.md)
-2. [Makale 2 analizi](article2_analysis.md)
-3. [Makale 1 analizi](article1_analysis.md)
-4. [YayÄ±n notlarÄ±](publication_notes.md)
-
-Ä°kinci analiz dosyasÄ±, repo adÄ±ndaki "industrial service operations" ekseniyle daha doÄŸrudan Ã¶rtÃ¼ÅŸtÃ¼ÄŸÃ¼ iÃ§in Ã¶nce okunabilir.
-
-## Bu depodan ne beklememelisiniz?
-
-Bu repo:
-
-- resmi kurum gÃ¶rÃ¼ÅŸÃ¼ sunmaz,
-- tam makale reprodÃ¼ksiyonu yapmaz,
-- ham staj defteri arÅŸivi gÃ¶revini Ã¼stlenmez.
-
-Buna karÅŸÄ±lÄ±k, Ã§Ã¶zmeye Ã§alÄ±ÅŸtÄ±ÄŸÄ±m problemi, kaynaklarÄ± nasÄ±l okuduÄŸumu ve hangi operasyonel Ã§Ä±karÄ±mlara ulaÅŸtÄ±ÄŸÄ±mÄ± ÅŸeffaf biÃ§imde gÃ¶sterir.
+Kamuya açık sürüm hazırlanırken kişisel/kurumsal ayrıntılar ayıklanmış, telifli PDF dosyaları repoya eklenmemiş, görseller kamuya açık portföy kullanımına uygun olacak biçimde seçilmiş veya yeniden düzenlenmiştir. Kaynaklar bibliyografik düzeyde gösterilir; orijinal dosyalar yeniden dağıtılmaz.
