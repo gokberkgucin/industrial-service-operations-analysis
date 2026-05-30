@@ -1,159 +1,75 @@
 # Industrial Service Operations Analysis
 
-Saha servis operasyonları dışarıdan yalnızca "arıza olduğunda teknik ekip göndermek" gibi görünebilir. Oysa arka planda daha zor bir karar problemi vardır: hangi işler planlanabilir, hangileri acildir, ekip ne kadar uzmanlaşmalı, ne kadar esnek kalmalıdır?
+Bu repo, Siemens Energy stajı sırasında yapılan iki akademik makale analizinin kamusal, seçilmiş sürümüdür. Amaç ham staj defteri yayımlamak değil; hizmet operasyonları, saha servis işgücü tasarımı ve önleyici bakım kararları üzerine teknik olarak dürüst, okunabilir ve portföy değeri olan bir çalışma sunmaktır.
 
-Bu depo, staj döneminde yapılan akademik okuma çalışmasını kamuya açık ve portföy odaklı bir analiz projesine dönüştürür. Amaç ham çalışma belgesi paylaşmak değil; hizmet operasyonları ve saha servis işgücü tasarımı üzerine okunabilir, anonim ve yeniden üretilebilir bir çalışma ortaya koymaktır.
+Bu çalışma Siemens Energy tarafından hazırlanmış, onaylanmış veya kurumsal görüş olarak yayımlanmış bir doküman değildir. İçerik; akademik okuma, kişisel analiz, kamuya uygun yeniden yazım ve küçük bir demo simülasyondan oluşur.
 
-## Projenin Amacı
+## Proje özeti
 
-Bu projenin amacı, endüstriyel saha servis operasyonlarında önleyici bakım, acil müdahale, teknisyen yetkinliği ve kapasite kullanımı arasındaki ilişkiyi sade bir çerçevede incelemektir.
+Proje iki akademik makaleden hareket eder:
 
-Depodaki Python simülasyonu gerçek bir organizasyon modelinin kopyası değildir. Öğretici amaçlı bir demo modeldir; temel hedefi, çapraz eğitim ve uzmanlaşma kararlarının backlog ve utilization gibi metriklerle nasıl tartışılabileceğini göstermektir.
+- Chase ve Apte'nin hizmet operasyonları araştırmasının tarihsel gelişimini ele alan çalışması
+- Colen ve Lambrecht'in saha servisinde çapraz eğitim politikalarını inceleyen çalışması
 
-## Bağlam
+İlk makale, hizmet operasyonlarının neden ayrı bir operasyon yönetimi alanı olarak ele alınması gerektiğine dair kavramsal arka plan sağlar. İkinci makale ise saha servis ekiplerinde esneklik, uzmanlaşma, önleyici bakım ve acil müdahale kapasitesi arasındaki teknik dengeyi tartışmak için ana ekseni oluşturur.
 
-Çalışma, iki akademik makaleyi okuma, anlama, yorumlama ve operasyon yönetimi açısından uygulanabilir çıkarımlara dönüştürme sürecinden doğdu.
+![Siemens Energy business units](figures/internship/siemens-energy-business-units.webp)
 
-Bu süreçte odak özellikle şu sorulara kaydı:
+## Neden önemli
 
-- Hizmet operasyonları neden ayrı bir operasyon yönetimi problemi olarak ele alınır?
-- Saha servis ekiplerinde esneklik ile uzmanlaşma arasında nasıl bir denge vardır?
-- Önleyici bakım geciktiğinde acil iş yükü nasıl büyüyebilir?
-- Basit bir simülasyon, bu karar mantığını görünür kılmak için nasıl kullanılabilir?
+Saha servis operasyonları yalnızca arıza olduğunda teknisyen göndermekten ibaret değildir. Planlı bakım işleri, acil arıza talepleri, teknisyen yetkinliği, seyahat süresi, müşteri beklentisi ve kapasite kullanımı aynı anda yönetilir.
 
-## İncelenen İki Çalışma
+Bu repo özellikle şu soruya odaklanır:
 
-1. Chase ve Apte'nin hizmet operasyonları araştırmasının tarihsel gelişimini ele alan çalışması, projenin kavramsal arka planını oluşturur.
+> Bir saha servis organizasyonu, tüm teknisyenleri esnek hale getirmeli mi, yoksa önleyici bakım için daha odaklı kapasite ayırmalı mı?
 
-2. Colen ve Lambrecht'in saha servisinde çapraz eğitim politikalarını inceleyen çalışması, projenin ana teknik eksenini oluşturur.
+Bu sorunun tek bir doğru cevabı yoktur. İş yükü, bakım periyodu, makine güvenilirliği, sözleşme kapsamı ve hizmet seviyesi hedefleri kararın sonucunu değiştirebilir.
 
-Bu depoda bu iki çalışmanın PDF dosyaları, tabloları, grafikleri veya uzun metin alıntıları paylaşılmaz. Kaynaklar yalnızca bibliyografik düzeyde belirtilir ve içerik özgün portföy anlatısına dönüştürülür.
+## İçerik haritası
 
-## Benim Bu Çalışmada Yaptığım Şey
+- [internship_summary.md](internship_summary.md): Staj bağlamı, görev tanımı ve repoya dönüştürme motivasyonu
+- [article1_analysis.md](article1_analysis.md): Hizmet operasyonları tarihçesi için kısa kavramsal analiz
+- [article2_analysis.md](article2_analysis.md): Saha servis çapraz eğitim kararı için teknik analiz
+- [publication_notes.md](publication_notes.md): Kamuya açık paylaşım, telif ve gizlilik sınırları
+- [references/bibliography.md](references/bibliography.md): Kullanılan iki akademik çalışmanın bibliyografik künyeleri
+- [references/citations.bib](references/citations.bib): BibTeX kayıtları
+- [src/field_service_toy_simulation.py](src/field_service_toy_simulation.py): Makaleyi kopyalamayan, öğretici demo simülasyon
+- [notebooks/field_service_toy_simulation.ipynb](notebooks/field_service_toy_simulation.ipynb): Simülasyon not defteri
 
-Bu çalışmada iki makaleyi yalnızca özetlemek yerine, operasyon yönetimi açısından ne söylediklerini ve kamuya açık bir portföy projesine nasıl dönüştürülebileceklerini inceledim.
+## Teknik temalar
 
-Yapılan işin ana parçaları:
+- Hizmet operasyonları araştırmasının kavramsal gelişimi
+- Saha servisinde önleyici bakım ve acil müdahale ayrımı
+- E-FSE / N-FSE işgücü tasarımı
+- Cross-training ve uzmanlaşma trade-off'u
+- Direct effect, indirect effect ve emergency trap mekanizması
+- Backlog, utilization, response time ve penalty-like score gibi metriklerin birlikte yorumlanması
+- Model varsayımlarını sorgulama ve sonuçları bağlama göre okuma
 
-- Hizmet operasyonları literatüründeki kavramları sade bir proje diline çevirmek
-- Saha servisinde önleyici bakım ve acil bakım ayrımını analiz etmek
-- Esnek teknisyen ve PM odaklı teknisyen ayrımını kamuya açık bir model diline dönüştürmek
-- Doğrudan/dolaylı etki, backlog ve kapasite kullanımı gibi kavramları uygulanabilir şekilde ele almak
-- Telifli ve kuruma özgü içeriklerden ayrıştırılmış bir GitHub depo yapısı tasarlamak
-- Basitleştirilmiş bir Python simülasyonu ile karar mantığını deneysel olarak göstermek
+![Response times under high workload](figures/article2/response-times-high-workload.webp)
 
-## Temel Çıkarımlar
+## Kamuya açık sürüm notu
 
-- Saha servis operasyonlarında en kritik meselelerden biri, planlı işler ile acil işler arasında kapasite dengesini korumaktır.
-- Tamamen esnek işgücü, atama kolaylığı sağlayabilir; ancak bazı planlı işlerin özel ekiplerce yürütülmesi belirli koşullarda fayda yaratabilir.
-- Önleyici bakımın gecikmesi, acil iş yükünü artırarak servis ekibini daha zor bir döngüye sokabilir.
-- Çapraz eğitim kararı yalnızca eğitim maliyetiyle değil; iş yükü, bakım sıklığı, makine güvenilirliği, seyahat süresi ve hizmet seviyesi hedefleriyle birlikte düşünülmelidir.
-- Kamuya açık portföyde en güvenli anlatı, belirli bir kurum veya ham çalışma belgesi yerine anonim problem, özgün analiz ve tekrar çalıştırılabilir küçük model üzerine kurulmalıdır.
+Bu repo ham staj defteri, kurum içi belge, telifli PDF arşivi veya makale kopyası değildir.
 
-## Demo Model
+Public sürümde özellikle dışarıda bırakılanlar:
 
-Bu repodaki simülasyon eğitim amaçlıdır ve açıkça illustrative / not a reproduction of the paper olarak tasarlanmıştır. Makaledeki verileri kullanmaz, makale sonuçlarını yeniden üretme iddiası taşımaz.
+- Ham DOCX/PDF dosyaları
+- Form sayfaları, imza/kaşe alanları ve kişisel bilgiler
+- Kurum içi detay izlenimi verebilecek metinler
+- Telifli makale tabloları, figürleri ve uzun doğrudan alıntılar
+- Kaynağı belirsiz üçüncü taraf görseller
 
-Modelde dört parametreyle oynanabilir:
+Teknik fikirler özgün dille yeniden yazılmıştır. Görsel fikirler gerekiyorsa kopyalanmış görsel olarak değil, yeniden çizilmiş diyagram veya sadeleştirilmiş açıklayıcı figür olarak kullanılmalıdır.
 
-- `workload`
-- `preventive_maintenance_interval`
-- `machine_reliability_proxy`
-- `dedicated_technician_ratio`
+## Okuma sırası
 
-Script, farklı PM odaklı teknisyen oranlarını karşılaştıran küçük bir tablo üretir:
+1. Önce [internship_summary.md](internship_summary.md) ile staj bağlamını ve bu repoya dönüşme motivasyonunu okuyun.
+2. Ardından [article1_analysis.md](article1_analysis.md) ile hizmet operasyonları arka planını görün.
+3. Sonra [article2_analysis.md](article2_analysis.md) ile projenin ana teknik kısmına geçin.
+4. Kamuya açık paylaşım sınırları için [publication_notes.md](publication_notes.md) dosyasını kontrol edin.
+5. Demo modelin mantığını görmek için `src/field_service_toy_simulation.py` dosyasını çalıştırın:
 
 ```powershell
 python .\src\field_service_toy_simulation.py
 ```
-
-Notebook ise üç görsel üretir:
-
-- emergency response proxy
-- PM timeliness proxy
-- total penalty-like score
-
-## Diyagramlar
-
-Hizmet operasyonları literatüründeki ana fikir akışı:
-
-```mermaid
-%% docs/figures/service-operations-timeline.mmd
-timeline
-    title Service Operations Research: Key Idea Flow
-    1900s-1950s : Scientific management in services
-                : Standard work and consistency
-    1960s-1970s : Production-line service logic
-                : Capacity and demand matching
-    1980s       : Service quality and customer contact
-                : Queues, guarantees, and measurement
-    1990s       : Service profit chain and experience economy
-                : Error prevention and customer experience
-    2000s+      : Behavioral science and service design
-                : Information-intensive and digital services
-```
-
-Saha servis çapraz eğitim kararındaki temel mekanizma:
-
-```mermaid
-%% docs/figures/field-service-tradeoff.mmd
-flowchart LR
-    A[Field service demand] --> B{Job type}
-    B --> C[PM: planned maintenance]
-    B --> D[Emergency repair]
-    E{Workforce design} --> F[E-FSE: flexible technicians]
-    E --> G[N-FSE: PM-focused technicians]
-    F --> C
-    F --> D
-    G --> C
-    G --> H[Direct effect: faster PM response]
-    H --> I[Less PM backlog]
-    I --> J[Indirect effect: fewer avoidable emergencies]
-    J --> K[Lower emergency pressure]
-    D --> L[Emergency priority]
-    L --> M[PM postponement risk]
-    M --> N[Emergency trap]
-    N --> D
-    K --> O[Service performance]
-    F --> O
-    M --> O
-```
-
-## Repo İçeriği
-
-- `README.md`: Türkçe proje tanıtımı
-- `README.en.md`: İngilizce proje tanıtımı
-- `REFERENCES.md`: Akademik kaynakların bibliyografik künyeleri
-- `docs/tr/project-overview.md`: Türkçe proje kapsamı
-- `docs/tr/article-1-service-operations-history.md`: Hizmet operasyonları tarihçesi için teknik okuma notu
-- `docs/tr/article-2-field-service-cross-training.md`: Saha servis çapraz eğitim analizi
-- `docs/tr/what-i-did.md`: Yapılan işin kamuya açık özeti
-- `docs/tr/lessons-learned.md`: Proje boyunca çıkarılan dersler
-- `docs/tr/public-sharing-note.md`: Gizlilik ve telif açısından paylaşım notu
-- `docs/en/project-overview.md`: İngilizce portföy özeti
-- `docs/figures/`: Mermaid diyagramları
-- `notebooks/field_service_toy_simulation.ipynb`: Simülasyon not defteri
-- `src/field_service_toy_simulation.py`: Tekrarlanabilir demo simülasyon
-
-## Kamuya Açık Paylaşım Notu
-
-Bu repo, kamuya açık paylaşım için güvenli olacak şekilde tasarlanmıştır.
-
-Depoya dahil edilmeyen içerikler:
-
-- Ham çalışma belgeleri
-- Kişi adları, imza/kaşe alanları ve tanımlayıcı bilgiler
-- Kurum içi bilgi izlenimi verebilecek ayrıntılar
-- Telifli akademik PDF dosyaları
-- Makale tabloları, grafik kopyaları veya uzun doğrudan alıntılar
-
-Bu nedenle proje, ham belge yayını değil; staj döneminde yapılan akademik okuma ve analiz çalışmasından türetilmiş bağımsız bir portföy projesi olarak okunmalıdır.
-
-## Kaynaklara Nasıl Atıf Yapıldığı
-
-Kaynaklar `REFERENCES.md` dosyasında bibliyografik künyeleriyle listelenir. Metin içinde kaynaklardan uzun alıntı yapılmaz; makalelerdeki fikirler özgün ifadelerle, analiz ve çıkarım düzeyinde ele alınır.
-
-Bu yaklaşımın amacı iki şeyi birlikte korumaktır:
-
-- Akademik kaynaklara doğru atıf vermek
-- Telifli yayınları veya ham kaynak materyallerini repoda yeniden yayımlamamak
