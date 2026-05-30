@@ -1,0 +1,22 @@
+﻿# Yerel Ã§alÄ±ÅŸma ve ham kaynaklar
+_work/
+work/
+planning/
+scripts/
+
+# Ham veya telifli kaynak dosyalar
+*.pdf
+*.docx
+*.doc
+*.odt
+raw/
+raw_sources/
+source_materials/
+private_reference/
+
+# GeÃ§ici Ã§Ä±ktÄ±lar
+*.log
+*.tmp
+__pycache__/
+.venv/
+venv/
