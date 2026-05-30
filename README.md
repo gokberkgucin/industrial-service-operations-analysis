@@ -1,75 +1,78 @@
 # Industrial Service Operations Analysis
 
-Bu repo, Siemens Energy stajı sırasında yapılan iki akademik makale analizinin kamusal, seçilmiş sürümüdür. Amaç ham staj defteri yayımlamak değil; hizmet operasyonları, saha servis işgücü tasarımı ve önleyici bakım kararları üzerine teknik olarak dürüst, okunabilir ve portföy değeri olan bir çalışma sunmaktır.
+Bu depo, Siemens Energy stajım sırasında yaptığım iki akademik makale analizinin GitHub'a uygun, seçilmiş ve kamusal sürümünü içerir.
 
-Bu çalışma Siemens Energy tarafından hazırlanmış, onaylanmış veya kurumsal görüş olarak yayımlanmış bir doküman değildir. İçerik; akademik okuma, kişisel analiz, kamuya uygun yeniden yazım ve küçük bir demo simülasyondan oluşur.
+Amaç, bir staj defterini olduğu gibi arşivlemek değil; hizmet operasyonları, saha servisi, bakım planlama ve analitik düşünme becerilerimi görünür kılan bir portföy çalışması üretmektir.
 
-## Proje özeti
+## Bu repoda ne var?
 
-Proje iki akademik makaleden hareket eder:
+Bu çalışma üç ana parçadan oluşuyor:
 
-- Chase ve Apte'nin hizmet operasyonları araştırmasının tarihsel gelişimini ele alan çalışması
-- Colen ve Lambrecht'in saha servisinde çapraz eğitim politikalarını inceleyen çalışması
+- staj bağlamını ve görevin kapsamını anlatan bir özet,
+- hizmet operasyonlarının tarihsel/kavramsal çerçevesini ele alan ilk makale analizi,
+- saha servisinde çapraz eğitim, önleyici bakım ve performans dengelerini ele alan ikinci makale analizi.
 
-İlk makale, hizmet operasyonlarının neden ayrı bir operasyon yönetimi alanı olarak ele alınması gerektiğine dair kavramsal arka plan sağlar. İkinci makale ise saha servis ekiplerinde esneklik, uzmanlaşma, önleyici bakım ve acil müdahale kapasitesi arasındaki teknik dengeyi tartışmak için ana ekseni oluşturur.
+![Siemens Energy bağlamı](figures/internship/siemens-energy-business-units.webp)
 
-![Siemens Energy business units](figures/internship/siemens-energy-business-units.webp)
+## Neden önemli?
 
-## Neden önemli
+Bu repo, üç farklı beceriyi aynı yerde göstermeyi amaçlıyor:
 
-Saha servis operasyonları yalnızca arıza olduğunda teknisyen göndermekten ibaret değildir. Planlı bakım işleri, acil arıza talepleri, teknisyen yetkinliği, seyahat süresi, müşteri beklentisi ve kapasite kullanımı aynı anda yönetilir.
+1. Yoğun akademik içeriği okuyup anlamlandırmak,
+2. Kavramsal ve teknik içeriği kendi cümlelerimle açıklamak,
+3. Teoriyi saha servisi ve operasyon yönetimi pratiğine bağlamak.
 
-Bu repo özellikle şu soruya odaklanır:
+Özellikle ikinci makale analizi, bakım iş yükü, önleyici bakım, acil bakım, teknisyen tipi, müşteri memnuniyeti ve kullanılabilirlik arasındaki dengeyi tartıştığı için bu deponun teknik merkezini oluşturur.
 
-> Bir saha servis organizasyonu, tüm teknisyenleri esnek hale getirmeli mi, yoksa önleyici bakım için daha odaklı kapasite ayırmalı mı?
-
-Bu sorunun tek bir doğru cevabı yoktur. İş yükü, bakım periyodu, makine güvenilirliği, sözleşme kapsamı ve hizmet seviyesi hedefleri kararın sonucunu değiştirebilir.
+![Makale 2 tartışmasını destekleyen açıklayıcı görsel](figures/article2/response-times-high-workload.webp)
 
 ## İçerik haritası
 
-- [internship_summary.md](internship_summary.md): Staj bağlamı, görev tanımı ve repoya dönüştürme motivasyonu
-- [article1_analysis.md](article1_analysis.md): Hizmet operasyonları tarihçesi için kısa kavramsal analiz
-- [article2_analysis.md](article2_analysis.md): Saha servis çapraz eğitim kararı için teknik analiz
-- [publication_notes.md](publication_notes.md): Kamuya açık paylaşım, telif ve gizlilik sınırları
-- [references/bibliography.md](references/bibliography.md): Kullanılan iki akademik çalışmanın bibliyografik künyeleri
-- [references/citations.bib](references/citations.bib): BibTeX kayıtları
-- [src/field_service_toy_simulation.py](src/field_service_toy_simulation.py): Makaleyi kopyalamayan, öğretici demo simülasyon
-- [notebooks/field_service_toy_simulation.ipynb](notebooks/field_service_toy_simulation.ipynb): Simülasyon not defteri
+- [Staj özeti](internship_summary.md)
+- [Makale 1 analizi](article1_analysis.md)
+- [Makale 2 analizi](article2_analysis.md)
+- [Yayın notları ve kapsam sınırları](publication_notes.md)
 
 ## Teknik temalar
 
-- Hizmet operasyonları araştırmasının kavramsal gelişimi
-- Saha servisinde önleyici bakım ve acil müdahale ayrımı
-- E-FSE / N-FSE işgücü tasarımı
-- Cross-training ve uzmanlaşma trade-off'u
-- Direct effect, indirect effect ve emergency trap mekanizması
-- Backlog, utilization, response time ve penalty-like score gibi metriklerin birlikte yorumlanması
-- Model varsayımlarını sorgulama ve sonuçları bağlama göre okuma
+Bu depoda öne çıkan başlıklar şunlardır:
 
-![Response times under high workload](figures/article2/response-times-high-workload.webp)
+- service operations
+- field service
+- preventive maintenance
+- emergency maintenance
+- workforce configuration
+- cross-training policy
+- customer experience
+- process thinking
 
 ## Kamuya açık sürüm notu
 
-Bu repo ham staj defteri, kurum içi belge, telifli PDF arşivi veya makale kopyası değildir.
+Bu repo, ham staj defteri değildir.
 
-Public sürümde özellikle dışarıda bırakılanlar:
+Kamuya açık sürüm hazırlanırken:
 
-- Ham DOCX/PDF dosyaları
-- Form sayfaları, imza/kaşe alanları ve kişisel bilgiler
-- Kurum içi detay izlenimi verebilecek metinler
-- Telifli makale tabloları, figürleri ve uzun doğrudan alıntılar
-- Kaynağı belirsiz üçüncü taraf görseller
-
-Teknik fikirler özgün dille yeniden yazılmıştır. Görsel fikirler gerekiyorsa kopyalanmış görsel olarak değil, yeniden çizilmiş diyagram veya sadeleştirilmiş açıklayıcı figür olarak kullanılmalıdır.
+- kişisel ve kurumsal ayrıntılar ayıklanmıştır,
+- bazı görseller sadeleştirilmiş veya yeniden üretilmiştir,
+- telif nedeniyle kaynak PDF dosyaları repoya eklenmemiştir,
+- içerik, portföy okunabilirliği için yeniden yapılandırılmıştır.
 
 ## Okuma sırası
 
-1. Önce [internship_summary.md](internship_summary.md) ile staj bağlamını ve bu repoya dönüşme motivasyonunu okuyun.
-2. Ardından [article1_analysis.md](article1_analysis.md) ile hizmet operasyonları arka planını görün.
-3. Sonra [article2_analysis.md](article2_analysis.md) ile projenin ana teknik kısmına geçin.
-4. Kamuya açık paylaşım sınırları için [publication_notes.md](publication_notes.md) dosyasını kontrol edin.
-5. Demo modelin mantığını görmek için `src/field_service_toy_simulation.py` dosyasını çalıştırın:
+Bu depoyu ilk kez geziyorsanız şu sırayla ilerlemenizi öneririm:
 
-```powershell
-python .\src\field_service_toy_simulation.py
-```
+1. `internship_summary.md`
+2. `article2_analysis.md`
+3. `article1_analysis.md`
+
+Bunun nedeni, ikinci analiz dosyasının repo adındaki “industrial service operations” ekseniyle daha doğrudan örtüşmesidir.
+
+## Bu depodan ne beklememelisiniz?
+
+Bu repo:
+
+- resmi kurum görüşü sunmaz,
+- tam makale reprodüksiyonu yapmaz,
+- ham staj defteri arşivi görevini üstlenmez.
+
+Buna karşılık, çözmeye çalıştığım problemi, kaynakları nasıl okuduğumu ve hangi operasyonel çıkarımlara ulaştığımı olabildiğince şeffaf biçimde gösterir.
