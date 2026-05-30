@@ -1,10 +1,9 @@
-﻿# Yerel Ã§alÄ±ÅŸma ve ham kaynaklar
+﻿# Private work area
 _work/
 work/
 planning/
-scripts/
 
-# Ham veya telifli kaynak dosyalar
+# Raw or copyrighted source material
 *.pdf
 *.docx
 *.doc
@@ -14,9 +13,13 @@ raw_sources/
 source_materials/
 private_reference/
 
-# GeÃ§ici Ã§Ä±ktÄ±lar
+# Generated temporary files
 *.log
 *.tmp
 __pycache__/
 .venv/
 venv/
+
+# Local and OS-generated files
+Thumbs.db
+.DS_Store
