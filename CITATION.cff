@@ -1,16 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this portfolio project, please cite it using the metadata below."
-title: "Industrial Service Operations Analysis"
-type: software
+message: "If you reference this GitHub Pages document publication, please cite it using the metadata below."
+title: "Industrial Service Operations Analysis: Internship Notebook Publication"
+type: dataset
 authors:
   - family-names: "Gucin"
     given-names: "Gokberk"
-abstract: "A public-safe portfolio project on industrial service operations, field-service cross-training, preventive maintenance, emergency workload, and illustrative simulation."
+abstract: "A GitHub Pages publication pipeline for a page-faithful internship notebook derived from a local DOCX source."
 repository-code: "https://github.com/gokberkgucin/industrial-service-operations-analysis"
-date-released: "2026-05-30"
+date-released: "2026-06-01"
 keywords:
   - service operations
-  - field service
-  - cross-training
-  - preventive maintenance
-  - operations analysis
+  - internship notebook
+  - document publication
+  - GitHub Pages
+  - page rendering
