@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Staj Defteri Görüntüleyicisi</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header compact">
+    <p class="kicker"><a href="index.html">Ana sayfa</a></p>
+    <h1>Staj Defteri Görüntüleyicisi</h1>
+    <p class="lead">
+      Sayfa görselleri `page_manifest.json` üzerinden yüklenir. Gezinme kontrolleri manifest sırasını esas alır.
+    </p>
+  </header>
+
+  <main class="viewer" data-viewer>
+    <aside class="viewer-sidebar" aria-label="Sayfa gezinme">
+      <div class="control-group">
+        <button type="button" data-prev-page>Önceki</button>
+        <button type="button" data-next-page>Sonraki</button>
+      </div>
+
+      <label class="field">
+        <span>Sayfa atla</span>
+        <select data-page-select></select>
+      </label>
+
+      <div class="page-status" data-page-status>Manifest yükleniyor.</div>
+      <nav class="page-list" data-page-list aria-label="Sayfa listesi"></nav>
+    </aside>
+
+    <section class="viewer-stage" data-page-stream aria-live="polite">
+      <p class="loading-note">Sayfa görselleri manifestten yükleniyor.</p>
+    </section>
+  </main>
+
+  <script src="assets/js/viewer.js"></script>
+</body>
+</html>
