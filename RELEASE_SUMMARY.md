@@ -36,4 +36,4 @@ Local-only tutulması gerekenler:
 
 - `scripts/verify_repo.py` son çalıştırmada PASS verdi.
 - Kırık relative link, eksik manifest sayfası veya eksik transcript sayfası raporlanmadı.
-- Push yapılmadan önce GitHub Pages URL yer tutucusu gerçek yayın adresiyle kontrol edilmelidir.
+- GitHub Pages URL doğrulandı: https://gokberkgucin.github.io/industrial-service-operations-analysis/

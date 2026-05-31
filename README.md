@@ -6,7 +6,7 @@ Amaç, staj defterini yeniden yorumlamak değil; kaynak belgenin sayfa sırasın
 
 ## Site
 
-GitHub Pages bağlantısı: `TODO: https://gokberkgucin.github.io/industrial-service-operations-analysis/`
+GitHub Pages bağlantısı: https://gokberkgucin.github.io/industrial-service-operations-analysis/
 
 Yerel önizleme:
 
