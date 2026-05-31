@@ -15,19 +15,13 @@ dist/
 .ipynb_checkpoints/
 
 # Local/private work products
+_work/
 work/
 outputs/
 tmp/
 temp/
 *.log
-planning/
 work/processed_images/private_reference/
-
-# Local extraction/build scripts generated during private source processing
-scripts/extract_docx_assets.py
-scripts/extract_pdf_assets.py
-scripts/optimize_images.py
-scripts/build_markdown.py
 
 # Temporary render and extraction folders
 **/rendered_pages/
@@ -45,6 +39,20 @@ raw/
 raw_sources/
 source_materials/
 private_reference/
+local_sources/
+_local_sources/
+third_party_sources/
+
+# Public artifact generated from the canonical internship DOCX.
+# Third-party article PDFs stay ignored by the broader *.pdf rule above.
+!docs/assets/staj/originals/
+!docs/assets/staj/originals/EK-10_Siemens_Staj_Makale_Analizleri.pdf
+!docs/assets/staj/originals/EK-10_Siemens_Staj_Makale_Analizleri.docx
+
+# Canonical/private local source files in the repo root stay untracked.
+/EK-10_Siemens_Staj_Makale_Analizleri.docx
+/Chase - A history of research in service operations  What s the big idea.pdf
+/Cross-training policies in field services.pdf
 
 # Editors and OS files
 .vscode/

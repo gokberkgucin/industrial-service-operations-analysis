@@ -1,0 +1,20 @@
+# Example repo-local settings.
+# This file is documentation-oriented; do not assume Codex loads it automatically.
+
+[repo]
+root = "D:\\TOPLANDIK\\IK\\industrial-service-operations-analysis"
+canonical_source = "EK-10_Siemens_Staj_Makale_Analizleri.docx"
+primary_output = "docs/staj-defteri.html"
+
+[publication]
+mode = "document-reproduction"
+page_scans_primary = true
+transcript_secondary = true
+language = "tr"
+use_relative_paths = true
+
+[safety]
+network_required = false
+track_third_party_pdfs_by_default = false
+require_git_status_before_destructive_changes = true
+require_phase_verification_summary = true
