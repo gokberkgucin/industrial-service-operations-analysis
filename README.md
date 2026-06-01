@@ -1,5 +1,13 @@
 # Industrial Service Operations Analysis
 
+## Staj defteri ve analizler
+
+Bu repo, Siemens Enerji stajım sırasında hazırladığım staj defterinin dijital ve aslına mümkün olduğunca sadık sürümünü içerir. Amaç yalnızca belge yüklemek değil; hizmet operasyonları, saha servisi, bakım planlaması ve verimlilik üzerine nasıl düşündüğümü metin, görsel ve yorumlarla birlikte görünür kılmaktır.
+
+- Tam staj defteri: `./notebook/`
+- PDF: `./files/EK-10_Siemens_Staj_Makale_Analizleri.pdf`
+- DOCX: `./files/EK-10_Siemens_Staj_Makale_Analizleri.docx`
+
 Bu repo, `EK-10_Siemens_Staj_Makale_Analizleri.docx` dosyasından üretilen staj defterinin GitHub Pages için hazırlanmış sayfa sadakati yüksek yayın sürümüdür.
 
 Amaç, staj defterini yeniden yorumlamak değil; kaynak belgenin sayfa sırasını ve görsel düzenini mümkün olduğunca koruyarak gezilebilir, aranabilir ve indirilebilir bir web yayını oluşturmaktır.
