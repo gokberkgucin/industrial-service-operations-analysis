@@ -17,6 +17,7 @@ dist/
 # Local/private work products
 _work/
 work/
+_build/
 outputs/
 tmp/
 temp/
@@ -48,6 +49,9 @@ third_party_sources/
 !docs/assets/staj/originals/
 !docs/assets/staj/originals/EK-10_Siemens_Staj_Makale_Analizleri.pdf
 !docs/assets/staj/originals/EK-10_Siemens_Staj_Makale_Analizleri.docx
+!docs/files/
+!docs/files/EK-10_Siemens_Staj_Makale_Analizleri.pdf
+!docs/files/EK-10_Siemens_Staj_Makale_Analizleri.docx
 
 # Canonical/private local source files in the repo root stay untracked.
 /EK-10_Siemens_Staj_Makale_Analizleri.docx
